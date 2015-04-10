@@ -1640,9 +1640,9 @@ static int stk500v2_open(PROGRAMMER * pgm, char * port)
     pinfo.usbinfo.pid = USB_DEVICE_AVRISPMKII;
     PDATA(pgm)->pgmtype = PGMTYPE_AVRISP_MKII;
     pgm->set_sck_period = stk500v2_set_sck_period_mk2;
-    pgm->fd.usb.max_xfer = USBDEV_MAX_XFER_MKII;
-    pgm->fd.usb.rep = USBDEV_BULK_EP_READ_MKII;
-    pgm->fd.usb.wep = USBDEV_BULK_EP_WRITE_MKII;
+    pgm->fd.usb.max_xfer = 0;
+    pgm->fd.usb.rep = -1;
+    pgm->fd.usb.wep = -1;
     pgm->fd.usb.eep = 0;           /* no seperate EP for events */
 #else
     avrdude_message(MSG_INFO, "avrdude was compiled without usb support.\n");
@@ -1698,7 +1698,7 @@ static int stk600_open(PROGRAMMER * pgm, char * port)
     pinfo.usbinfo.pid = USB_DEVICE_STK600;
     PDATA(pgm)->pgmtype = PGMTYPE_STK600;
     pgm->set_sck_period = stk600_set_sck_period;
-    pgm->fd.usb.max_xfer = USBDEV_MAX_XFER_MKII;
+    pgm->fd.usb.max_xfer = 0;
     pgm->fd.usb.rep = USBDEV_BULK_EP_READ_STK600;
     pgm->fd.usb.wep = USBDEV_BULK_EP_WRITE_STK600;
     pgm->fd.usb.eep = 0;           /* no seperate EP for events */
@@ -3400,9 +3400,9 @@ static int stk500v2_jtagmkII_open(PROGRAMMER * pgm, char * port)
     pinfo.usbinfo.vid = USB_VENDOR_ATMEL;
     pinfo.usbinfo.flags = 0;
     pinfo.usbinfo.pid = USB_DEVICE_JTAGICEMKII;
-    pgm->fd.usb.max_xfer = USBDEV_MAX_XFER_MKII;
-    pgm->fd.usb.rep = USBDEV_BULK_EP_READ_MKII;
-    pgm->fd.usb.wep = USBDEV_BULK_EP_WRITE_MKII;
+    pgm->fd.usb.max_xfer = 0;
+    pgm->fd.usb.rep = -1;
+    pgm->fd.usb.wep = -1;
     pgm->fd.usb.eep = 0;           /* no seperate EP for events */
 #else
     avrdude_message(MSG_INFO, "avrdude was compiled without usb support.\n");
@@ -3511,9 +3511,9 @@ static int stk500v2_dragon_isp_open(PROGRAMMER * pgm, char * port)
     pinfo.usbinfo.vid = USB_VENDOR_ATMEL;
     pinfo.usbinfo.flags = 0;
     pinfo.usbinfo.pid = USB_DEVICE_AVRDRAGON;
-    pgm->fd.usb.max_xfer = USBDEV_MAX_XFER_MKII;
-    pgm->fd.usb.rep = USBDEV_BULK_EP_READ_MKII;
-    pgm->fd.usb.wep = USBDEV_BULK_EP_WRITE_MKII;
+    pgm->fd.usb.max_xfer = 0;
+    pgm->fd.usb.rep = -1;
+    pgm->fd.usb.wep = -1;
     pgm->fd.usb.eep = 0;           /* no seperate EP for events */
 #else
     avrdude_message(MSG_INFO, "avrdude was compiled without usb support.\n");
@@ -3589,9 +3589,9 @@ static int stk500v2_dragon_hv_open(PROGRAMMER * pgm, char * port)
     pinfo.usbinfo.vid = USB_VENDOR_ATMEL;
     pinfo.usbinfo.flags = 0;
     pinfo.usbinfo.pid = USB_DEVICE_AVRDRAGON;
-    pgm->fd.usb.max_xfer = USBDEV_MAX_XFER_MKII;
-    pgm->fd.usb.rep = USBDEV_BULK_EP_READ_MKII;
-    pgm->fd.usb.wep = USBDEV_BULK_EP_WRITE_MKII;
+    pgm->fd.usb.max_xfer = 0;
+    pgm->fd.usb.rep = -1;
+    pgm->fd.usb.wep = -1;
     pgm->fd.usb.eep = 0;           /* no seperate EP for events */
 #else
     avrdude_message(MSG_INFO, "avrdude was compiled without usb support.\n");
