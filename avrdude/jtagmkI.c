@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: jtagmkI.c 1345 2014-11-23 20:57:17Z joerg_wunsch $ */
 
 /*
  * avrdude interface for Atmel JTAG ICE (mkI) programmer

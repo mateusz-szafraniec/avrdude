@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-/* $Id$ */
+/* $Id: serbb.h 1107 2012-11-20 14:03:50Z joerg_wunsch $ */
 
 #ifndef serbb_h
 #define serbb_h

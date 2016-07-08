@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-/* $Id$ */
+/* $Id: serbb_win32.c 1321 2014-06-13 20:07:40Z awachtler $ */
 
 /*
  * Win32 serial bitbanging interface for avrdude.

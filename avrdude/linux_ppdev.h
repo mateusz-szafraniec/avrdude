@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: linux_ppdev.h 1325 2014-06-23 20:20:38Z rliebscher $ */
 
 #ifndef linux_ppdev_h
 #define linux_ppdev_h

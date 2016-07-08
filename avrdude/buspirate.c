@@ -33,7 +33,7 @@
  * Tested with BusPirate PTH, firmware version 2.1 programming ATmega328P
  */
 
-/* $Id$ */
+/* $Id: buspirate.c 1339 2014-11-13 13:53:47Z rliebscher $ */
 
 #include "ac_cfg.h"
 

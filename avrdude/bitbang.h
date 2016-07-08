@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-/* $Id$ */
+/* $Id: bitbang.h 1301 2014-05-16 15:52:25Z joerg_wunsch $ */
 
 #ifndef bitbang_h
 #define bitbang_h

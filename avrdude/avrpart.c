@@ -18,7 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: avrpart.c 1332 2014-08-18 21:43:08Z rliebscher $ */
 
 #include <stdlib.h>
 #include <string.h>

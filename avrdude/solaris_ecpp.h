@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: solaris_ecpp.h 1107 2012-11-20 14:03:50Z joerg_wunsch $ */
 
 #ifndef solaris_ecpp_h
 #define solaris_ecpp_h

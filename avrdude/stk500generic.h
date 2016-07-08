@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: stk500generic.h 1107 2012-11-20 14:03:50Z joerg_wunsch $ */
 
 #ifndef stk500generic_h__
 #define stk500generic_h__

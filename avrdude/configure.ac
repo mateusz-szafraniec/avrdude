@@ -17,13 +17,13 @@
 #
 
 #
-# $Id$
+# $Id: configure.ac 1390 2016-04-20 20:40:58Z joerg_wunsch $
 #
 
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.60)
-AC_INIT(avrdude, 6.1-20140519, avrdude-dev@nongnu.org)
+AC_INIT(avrdude, 6.3-20160220, avrdude-dev@nongnu.org)
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
@@ -150,13 +150,32 @@ if test x$have_libusb_1_0 = xyes; then
    AC_CHECK_HEADERS([libusb.h])
 fi
 AC_SUBST(LIBUSB_1_0, $LIBUSB_1_0)
+
+AH_TEMPLATE([HAVE_LIBHIDAPI],
+            [Define if HID support is enabled via libhidapi])
+AC_SEARCH_LIBS([hid_init], [hidapi hidapi-libusb hidapi-hidraw], [have_libhidapi=yes])
+if test x$have_libhidapi = xyes; then
+   case $target in
+       *-*-darwin*)
+               LIBHIDAPI="-lhidapi -iframework CoreFoundation -framework IOKit"
+               ;;
+       *)
+               LIBHIDAPI="$ac_cv_lib_hid_init"
+               ;;
+   esac
+   AC_DEFINE([HAVE_LIBHIDAPI])
+   AC_CHECK_HEADERS([hidapi/hidapi.h])
+fi
+AC_SUBST(LIBHIDAPI, $LIBHIDAPI)
+
+
 AH_TEMPLATE([HAVE_LIBFTDI1],
             [Define if FTDI support is enabled via libftdi1])
 AH_TEMPLATE([HAVE_LIBFTDI],
             [Define if FTDI support is enabled via libftdi])
 AH_TEMPLATE([HAVE_LIBFTDI_TYPE_232H],
             [Define if libftdi supports FT232H, libftdi version >= 0.20])
-AC_CHECK_LIB([ftdi1], [ftdi_new], [have_libftdi1=yes], [], [-lusb-1.0])
+AC_CHECK_LIB([ftdi1], [ftdi_new], [have_libftdi1=yes], [], [$LIBUSB_1_0])
 AC_CHECK_LIB([ftdi], [ftdi_usb_get_strings], [have_libftdi=yes], [], [-lusb])
 if test x$have_libftdi1 = xyes; then
    LIBFTDI1="-lftdi1"
@@ -519,6 +538,12 @@ if test x$have_libhid = xyes; then
    echo "DO HAVE    libhid"
 else
    echo "DON'T HAVE libhid"
+fi
+
+if test x$have_libhidapi = xyes; then
+   echo "DO HAVE    libhidapi"
+else
+   echo "DON'T HAVE libhidapi"
 fi
 
 if test x$have_pthread = xyes; then

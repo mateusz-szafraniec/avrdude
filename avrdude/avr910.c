@@ -18,7 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: avr910.c 1321 2014-06-13 20:07:40Z awachtler $ */
 
 /*
  * avrdude interface for Atmel Low Cost Serial programmers which adher to the

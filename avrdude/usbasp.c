@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: usbasp.c 1343 2014-11-20 09:20:44Z joerg_wunsch $ */
 
 /*
  * Interface to the USBasp programmer.

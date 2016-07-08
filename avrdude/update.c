@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: update.c 1355 2015-04-09 19:50:30Z joerg_wunsch $ */
 
 #include <stdio.h>
 #include <stdlib.h>

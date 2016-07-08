@@ -19,7 +19,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: stk500v2.c 1342 2014-11-19 17:23:14Z joerg_wunsch $ */
 /* Based on Id: stk500.c,v 1.46 2004/12/22 01:52:45 bdean Exp */
 
 /*

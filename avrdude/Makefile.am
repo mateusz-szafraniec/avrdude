@@ -17,7 +17,7 @@
 #
 
 #
-# $Id$
+# $Id: Makefile.am 1381 2016-02-20 22:50:13Z joerg_wunsch $
 #
 
 EXTRA_DIST   = \
@@ -66,7 +66,7 @@ avrdude_CFLAGS   = @ENABLE_WARNINGS@
 libavrdude_a_CFLAGS   = @ENABLE_WARNINGS@
 libavrdude_la_CFLAGS  = $(libavrdude_a_CFLAGS)
 
-avrdude_LDADD  = $(top_builddir)/$(noinst_LIBRARIES) @LIBUSB_1_0@ @LIBUSB@ @LIBFTDI1@ @LIBFTDI@ @LIBHID@ @LIBELF@ @LIBPTHREAD@ -lm
+avrdude_LDADD  = $(top_builddir)/$(noinst_LIBRARIES) @LIBUSB_1_0@ @LIBHIDAPI@ @LIBUSB@ @LIBFTDI1@ @LIBFTDI@ @LIBHID@ @LIBELF@ @LIBPTHREAD@ -lm
 
 bin_PROGRAMS = avrdude
 
@@ -110,6 +110,7 @@ libavrdude_a_SOURCES = \
 	butterfly.c \
 	butterfly.h \
 	config.c \
+	config.h \
 	confwin.c \
 	crc16.c \
 	crc16.h \
@@ -141,7 +142,6 @@ libavrdude_a_SOURCES = \
 	par.c \
 	par.h \
 	pgm.c \
-	pgm.h \
 	pgm_type.c \
 	pickit2.c \
 	pickit2.h \
@@ -169,6 +169,7 @@ libavrdude_a_SOURCES = \
 	usbasp.c \
 	usbasp.h \
 	usbdevs.h \
+	usb_hidapi.c \
 	usb_libusb.c \
 	usbtiny.h \
 	usbtiny.c \
