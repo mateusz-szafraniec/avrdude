@@ -22,8 +22,8 @@
 
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.60)
-AC_INIT(avrdude, 6.3-20160220-lufa, avrdude-dev@nongnu.org)
+AC_PREREQ([2.68])
+AC_INIT([avrdude],[6.3-20160220-lufa],[avrdude-dev@nongnu.org])
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
@@ -236,10 +236,9 @@ LIBS="${LIBS} ${LIBHID}"
 
 AH_TEMPLATE([HAVE_LIBHID],
             [Define if HID support is enabled via the Win32 DDK])
-AC_TRY_LINK([#include <windows.h>
+AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <windows.h>
 #include <setupapi.h>
-$HIDINCLUDE],
-[int
+$HIDINCLUDE]], [[int
 main(void)
 {
     GUID hidGuid;
@@ -247,7 +246,7 @@ main(void)
 
     return 0;
 }
-], [have_libhid=yes], [have_libhid=no])
+]])],[have_libhid=yes],[have_libhid=no])
 AC_MSG_RESULT([$have_libhid])
 if test x$have_libhid = xyes; then
    AC_DEFINE([HAVE_LIBHID])
@@ -268,9 +267,7 @@ AC_CHECK_TYPES([ulong_t], [], [], [#include <sys/types.h>])
 
 AC_ARG_ENABLE(
 	[versioned-doc],
-	AC_HELP_STRING(
-		[--enable-versioned-doc],
-		[install docs in directory with version name (default)]),
+	AS_HELP_STRING([--enable-versioned-doc],[install docs in directory with version name (default)]),
 	[case "${enableval}" in
 		yes) versioned_doc=yes ;;
 		no)  versioned_doc=no ;;
@@ -286,9 +283,7 @@ fi
 
 AC_ARG_ENABLE(
 	[doc],
-	AC_HELP_STRING(
-		[--enable-doc],
-		[Enable building documents]),
+	AS_HELP_STRING([--enable-doc],[Enable building documents]),
 	[case "${enableval}" in
 		yes) enabled_doc=yes ;;
 		no)  enabled_doc=no ;;
@@ -298,9 +293,7 @@ AC_ARG_ENABLE(
 
 AC_ARG_ENABLE(
 	[parport],
-	AC_HELP_STRING(
-		[--enable-parport],
-		[Enable accessing parallel ports(default)]),
+	AS_HELP_STRING([--enable-parport],[Enable accessing parallel ports(default)]),
 	[case "${enableval}" in
 		yes) enabled_parport=yes ;;
 		no)  enabled_parport=no ;;
@@ -310,9 +303,7 @@ AC_ARG_ENABLE(
 	
 AC_ARG_ENABLE(
 	[linuxgpio],
-	AC_HELP_STRING(
-		[--enable-linuxgpio],
-		[Enable the Linux sysfs GPIO interface programmer type]),
+	AS_HELP_STRING([--enable-linuxgpio],[Enable the Linux sysfs GPIO interface programmer type]),
 	[case "${enableval}" in
 		yes) enabled_linuxgpio=yes ;;
 		no)  enabled_linuxgpio=no ;;
@@ -407,10 +398,10 @@ if test "$GCC" = yes; then
 	safe_CFLAGS=$CFLAGS
 	CFLAGS="$ENABLE_WARNINGS -Wno-pointer-sign"
 
-	AC_TRY_COMPILE(, [ int main () { return 0 ; } ], [
+	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[ int main () { return 0 ; } ]])],[
 		no_pointer_sign=yes
 		AC_MSG_RESULT([yes]) 
-		], [
+		],[
 		no_pointer_sign=no
 		AC_MSG_RESULT([no]) 
 		])
@@ -432,10 +423,10 @@ case $target in
 			safe_CFLAGS="$CFLAGS"
 			CFLAGS="$ENABLE_WARNINGS -mno-cygwin"
 
-			AC_TRY_COMPILE(, [ int main () { return 0 ; } ], [
+			AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[ int main () { return 0 ; } ]])],[
 				no_cygwin=yes
 				AC_MSG_RESULT([yes])
-				], [
+				],[
 				no_cygwin=no
 				AC_MSG_RESULT([no])
 				])
@@ -456,10 +447,10 @@ case $target in
 
 		safe_LDFLAGS="$LDFLAGS"
 		LDFLAGS="${LDFLAGS} -static"
-		AC_TRY_LINK(, [ int main () { return 0 ; } ], [
+		AC_LINK_IFELSE([AC_LANG_PROGRAM([[]], [[ int main () { return 0 ; } ]])],[
 			can_link_static=yes
 			AC_MSG_RESULT([yes])
-			], [
+			],[
 			can_link_static_cygwin=no
 			AC_MSG_RESULT([no])
 			])
