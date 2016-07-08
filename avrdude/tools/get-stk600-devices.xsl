@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
- * $Id$
+ * $Id: get-stk600-devices.xsl 1107 2012-11-20 14:03:50Z joerg_wunsch $
 -->
 <!--
     * Extract STK600 device support out of

@@ -18,7 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: ppiwin.c 1321 2014-06-13 20:07:40Z awachtler $ */
 
 /*
 This is the parallel port interface for Windows built using Cygwin.

@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: jtagmkII_private.h 1212 2013-09-08 19:57:58Z joerg_wunsch $ */
 
 
 /*

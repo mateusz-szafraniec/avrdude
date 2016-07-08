@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: libavrdude.h 1381 2016-02-20 22:50:13Z joerg_wunsch $ */
 
 #ifndef libavrdude_h
 #define libavrdude_h
@@ -563,6 +563,7 @@ extern struct serial_device serial_serdev;
 extern struct serial_device usb_serdev;
 extern struct serial_device usb_serdev_frame;
 extern struct serial_device avrdoper_serdev;
+extern struct serial_device usbhid_serdev;
 
 #define serial_open (serdev->open)
 #define serial_setspeed (serdev->setspeed)

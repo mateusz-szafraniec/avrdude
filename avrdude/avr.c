@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: avr.c 1340 2014-11-14 10:22:52Z rliebscher $ */
 
 #include "ac_cfg.h"
 

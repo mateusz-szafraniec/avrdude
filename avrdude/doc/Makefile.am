@@ -17,7 +17,7 @@
 #
 
 #
-# $Id$
+# $Id: Makefile.am 1107 2012-11-20 14:03:50Z joerg_wunsch $
 #
 
 GENERATED_TEXINFOS = \

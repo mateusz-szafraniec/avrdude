@@ -18,7 +18,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: ser_avrdoper.c 1328 2014-07-16 20:02:01Z rliebscher $ */
 
 /*
  * Serial Interface emulation for USB programmer "AVR-Doper" in HID mode.

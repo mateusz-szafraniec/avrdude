@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: fileio.c 1338 2014-10-15 20:01:12Z joerg_wunsch $ */
 
 #include "ac_cfg.h"
 

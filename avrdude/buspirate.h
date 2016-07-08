@@ -19,7 +19,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: buspirate.h 1138 2013-01-30 21:15:39Z rliebscher $ */
 
 #ifndef buspirate_h
 #define buspirate_h

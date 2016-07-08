@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: dfu.h 1268 2014-01-17 14:00:01Z joerg_wunsch $ */
 
 #ifndef dfu_h
 #define dfu_h

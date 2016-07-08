@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: config.c 1322 2014-06-17 20:08:28Z rliebscher $ */
 
 #include "ac_cfg.h"
 

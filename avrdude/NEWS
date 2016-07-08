@@ -1,4 +1,4 @@
-$Id$
+$Id: NEWS 1391 2016-05-09 22:05:59Z joerg_wunsch $
 
 Approximate change log for AVRDUDE by version.
 
@@ -6,6 +6,54 @@ Approximate change log for AVRDUDE by version.
 
 ----------------------------------------------------------------------
 Current:
+
+  * Major changes compared to the previous version:
+
+    - libhidapi support (part of patch #8717)
+    - use libhidapi as (optional) transport for CMSIS-DAP compliant
+      debuggers (JTAGICE3 with firmware 3+, AtmelICE, EDBG, mEDBG)
+
+  * New devices supported:
+
+  * New programmers supported:
+
+    - ehajo-isp (commercial version of USBtiny)
+
+  * Bugfixes:
+    bug #47550: Linux GPIO broken
+
+  * Internals:
+
+
+Version 6.3:
+
+  * Major changes compared to the previous version:
+
+    - Backout of
+      patch #8380: adds 500k 1M 2M baud to ser_posix.c
+      It broke the functionality in too many situations
+      (bug #46610/46483)
+
+  * New devices supported:
+
+    - ATmega48PB, ATmega88PB, ATmega168PB
+    - ATtiny28 (HVPP-only device)
+
+  * New programmers supported:
+
+    - Atmel mEDBG: xplainedmini, xplainedmini_dw
+
+  * Bugfixes
+
+    - bug #46610: Floating point exception (core dumped) arch linux rpi2
+    - bug #46483: version 6.2. ser_open(): can't set attributes for device
+    - patch #8435: Implementing mEDBG CMSIS-DAP protocol
+    - patch #8735: ATtiny28 support in avrdude.conf
+    - patch #8896: Silence cppcheck warnings in 6.2 code
+    - patch #8895: Spelling in 6.2 code
+
+
+Version 6.2:
 
   * Major changes compared to the previous version:
 
@@ -42,6 +90,9 @@ Current:
         (patch #8529 2 more ftdi_syncbb devices)
 
   * Bugfixes
+    - bug #45727: Wrong atmega8u2 flash parameters
+    - bug #46020: Add TIAO TUMPA to the conf file.
+    - bug #46021: Please add read in the memory lock section of ATtiny85
     - bug #42337 avrdude.conf updates for UM232H/CM232H
     - bug #42056: double free or corruption triggered at exit
     - bug #42158: Linux GPIO - Source Typo
@@ -60,7 +111,6 @@ Current:
     - bug #40870: config nitpick: ATtiny25/45/85 have 1 calibration byte not 2
     - bug #42908: no external reset at JTAGICE3
     - patch #8437: [PATCH] Serial-over-ethernet for Win32
-    - patch #8380: adds 500k 1M 2M baud to ser_posix.c
     - bug #44717: avrdude creates empty flash dump
 
   * Internals:

@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: main.c 1347 2014-11-23 21:49:56Z joerg_wunsch $ */
 
 /*
  * Code to program an Atmel AVR device through one of the supported

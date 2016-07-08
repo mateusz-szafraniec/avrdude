@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: ser_win32.c 1353 2014-11-26 09:38:15Z joerg_wunsch $ */
 
 /*
  * Native Win32 serial interface for avrdude.

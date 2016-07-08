@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: stk500v2.h 1119 2012-12-03 15:52:38Z joerg_wunsch $ */
 
 #ifndef stk500v2_h
 #define stk500v2_h

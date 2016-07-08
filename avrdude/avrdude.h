@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: avrdude.h 1321 2014-06-13 20:07:40Z awachtler $ */
 
 #ifndef avrdude_h
 #define avrdude_h

@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* $Id$ */
+/* $Id: dfu.c 1328 2014-07-16 20:02:01Z rliebscher $ */
 
 #include "ac_cfg.h"
 
